@@ -10,4 +10,4 @@ Strona z podręcznika:
 ![image](https://user-images.githubusercontent.com/56955430/139602513-505ef301-d373-4147-bf9a-740d51dc035c.png)
 Stworzone z wykorzystaniem bootstrapa oraz canvas
 Formularz:
-![image](https://user-images.githubusercontent.com/56955430/139704231-6ac1668d-ec9c-4c10-9146-d203f7aed21e.png)
+![image](https://user-images.githubusercontent.com/56955430/139705035-9a8472f3-df94-4727-9871-b380bd465c1f.png)
