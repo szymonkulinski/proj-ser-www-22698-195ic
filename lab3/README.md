@@ -6,6 +6,8 @@ Na stronie odpowiednio:
 <br>
 -Wyświetl alert
 <br>
+![image](https://user-images.githubusercontent.com/56955430/141384113-c85f594f-156e-489b-a1d2-32c888dfa27d.png)
+<br>
 ![image](https://user-images.githubusercontent.com/56955430/142031982-db17eb6f-ed45-45ef-a384-974435aad457.png)
 <br>
 -Zmien kolor tla
