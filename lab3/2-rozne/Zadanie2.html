@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zadania - podstawy</title>
+    <script src="js/app.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+	<script>
+		function fixName(txt)
+		{
+			firstLetter = txt.charAt(0).toUpperCase();
+			rest = txt.slice(1);
+			rest = rest.toLowerCase();
+			return firstLetter + rest;
+		}
+	</script>
+</head>
+<body>
+	<script>
+		txt = window.prompt('Wprowadz imie:');
+		txt = fixName(txt);
+		console.info("Imie " + txt + " zaczyna się od litery " + txt.charAt(0));
+	</script>
+
+</body>
+</html>

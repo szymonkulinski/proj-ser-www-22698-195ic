@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zadania - podstawy</title>
+    <script src="js/app.js" defer></script>
+    <link rel="stylesheet" href="css/style.css">
+	<script>
+		function generateID(length)
+		{
+			var result           = '';
+			var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()';
+			var charactersLength = characters.length;
+			for ( var i = 0; i < length; i++ ) {
+			  result += characters.charAt(Math.floor(Math.random() * 
+		 charactersLength));
+		}
+				 return result;
+		}
+	</script>
+</head>
+<body>
+	<script>
+		alert(generateID(20));
+	</script>
+
+</body>
+</html>

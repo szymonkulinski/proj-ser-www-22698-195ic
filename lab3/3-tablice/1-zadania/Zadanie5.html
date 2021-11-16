@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zadania - tablice</title>
+    <script src="js/app.js" defer></script>
+	<script>
+		function sort(tab)
+		{
+			const tabCopy = tab.sort((a,b) => b.length - a.length);
+		}
+		function countCharacters(tab)
+		{
+			len = 0;
+			for(let i = 0; i < tab.length; i++)
+			{
+				len += tab[i].length;
+			}
+			return len;
+		}
+	</script>
+</head>
+<body>
+	<script>
+		const tab = [
+			"xloremipsumdolor",
+			"kloremipsum",
+			"aloremipsumdol",
+			"blor",
+			"cloremipsu",
+			"gloremip",
+					]
+		sort(tab);
+		console.log(tab);
+		console.log(countCharacters(tab));
+		
+	</script>
+
+</body>
+</html>
+
