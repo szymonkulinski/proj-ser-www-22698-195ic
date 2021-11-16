@@ -27,6 +27,12 @@
 	
 	<div id = "Height"></div>
 	<div id = "Width"></div>
+	<div id = "Message"></div>
+	<textarea id = "Texta"></textarea>
+	<div id = "Characters"></div>
+	<div id = "WritedText"></div>
+	<div id = "WritedMessage"></div>
+	<div id = "PastedMessages"></div>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
@@ -40,11 +46,65 @@
     -->
 	<script>
 		Alert.addEventListener("click", function(){ alert("Alert!"); });
-		Alert.addEventListener("click", changeBackgroundToRed);
+		Alert.addEventListener("mouseenter", changeBackgroundTo);
+		Alert.addEventListener("mouseleave", changeBackgroundWhite);
 		
-		function changeBackgroundToRed()
+		Texta.addEventListener("input", characterCount);
+		Texta.addEventListener("change", writeMessage);
+		
+		world.addEventListener("copy", changeHello);
+		Texta.addEventListener("select", writeSelectedText);
+		
+		Texta.addEventListener("paste", countPastedThings);
+		
+		var copy = 1;
+		var pasted = 0;
+		
+		function countPastedThings()
+		{
+			pasted++;
+			document.getElementById("WritedText").innerHTML = "Liczba wklejonych rzeczy " + pasted;
+		}
+		function writeSelectedText()
+		{
+			var text = Texta.value;
+			var indexStart=Texta.selectionStart;
+			var indexEnd=Texta.selectionEnd;
+			var tekst = text.substring(indexStart, indexEnd);
+			document.getElementById("WritedText").innerHTML = "Zaznaczony tekst: " + tekst;
+		}
+		
+		function writeMessage()
+		{
+			var text = Texta.value;
+			document.getElementById("WritedMessage").innerHTML = "Wpisana wiadomość: " + text;
+		}
+		
+		function changeHello()
+		{
+			document.getElementById("world").innerHTML = "Hello, world! x" + copy;
+			copy++;
+		}
+		
+		function characterCount()
+		{
+			var len = Texta.value.length;
+			if (len >= 500) {
+			  Texta.value = Texta.value.substring(0, 500);
+			} else {
+			  $('#charNum').text(500 - len);
+			}
+			document.getElementById("Characters").innerHTML = "Liczba znaków: " + len + "/" + 500;
+		}
+		
+		function changeBackgroundTo()
 		{
 			this.style.background = "red";
+		}
+		
+		function changeBackgroundWhite()
+		{
+			this.style.background = "white";
 		}
 		
 		function randomColor()
@@ -55,7 +115,7 @@
 			var color = "rgb(" + x + "," + y + "," + z + ")";
 			return color;
 		} 
-		
+
 		function SetRandomColor()
 		{
 			document.body.style.backgroundColor = randomColor();
@@ -100,6 +160,20 @@
 		window.addEventListener('resize', reportWindowHeight);
 		window.addEventListener('resize', reportWindowWidth);
 		
+		
+		document.addEventListener('mouseenter', InWindowMessage);
+		document.addEventListener('mouseleave', outOfWindowMessage);
+		
+		
+		function outOfWindowMessage()
+		{
+			document.getElementById("Message").innerHTML = "Kursor poza oknem!";
+		} 
+		function InWindowMessage()
+		{
+			document.getElementById("Message").innerHTML = "Kursor znajduje się w oknie";
+		} 
+		
 		numFont = 0;
 		function nextFont()
 		{
@@ -137,9 +211,24 @@
 			fontSizeInt--;
 			document.getElementById("world").style.fontSize = fontSizeInt + 'px';
 		}
+		
+		function fontSizePlusDouble()
+		{
+			fontSizeInt+=5;
+			document.getElementById("world").style.fontSize = fontSizeInt + 'px';
+		}
+		
+		function fontSizeMinusDouble()
+		{
+			fontSizeInt-=5;
+			document.getElementById("world").style.fontSize = fontSizeInt + 'px';
+		}
 
 		FontSizePlus.addEventListener("click", fontSizePlus)
 		FontSizeMinus.addEventListener("click", fontSizeMinus)
+		
+		FontSizePlus.addEventListener("dblclick", fontSizePlusDouble)
+		FontSizeMinus.addEventListener("dblclick", fontSizeMinusDouble)
 	</script>
   </body>
 </html>

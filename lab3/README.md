@@ -1,10 +1,15 @@
 Obsługa zdarzeń:
 <br>
-![image](https://user-images.githubusercontent.com/56955430/141384081-924c1e61-a82f-4898-b0e9-6c73aed8b0cf.png)
+Zastosowane wyjątki:
+click, mouseenter, mouseleave, resize, change, input,  dblclick, select, pasted, copy
+<br>
+![image](https://user-images.githubusercontent.com/56955430/142061923-4d450ad8-a6b4-40f9-b234-6c70fde88983.png)
 <br>
 Na stronie odpowiednio:
 <br>
 -Wyświetl alert
+<br>
+Najechanie na alert sprawi, ze zmieni on kolor na czerwony:
 <br>
 ![image](https://user-images.githubusercontent.com/56955430/141384113-c85f594f-156e-489b-a1d2-32c888dfa27d.png)
 <br>
@@ -26,9 +31,29 @@ Na stronie odpowiednio:
 <br>
 -Font +/-
 <br>
+Double clik sprawi, że font powiekszy/zmiejszy sie o wiekszą wartość
 ![image](https://user-images.githubusercontent.com/56955430/141384334-473a5a96-ab52-4f03-97fb-499642fc6a26.png)
 <br>
 ![image](https://user-images.githubusercontent.com/56955430/141384364-9a34f86b-d36c-44d3-b80a-028178dff16b.png)
+<br>
+Widomość na dole wyświetla, czy kursor znajduje się w oknie czy nie 
+<br>
+![image](https://user-images.githubusercontent.com/56955430/142062025-7d0ed0aa-e7b2-41b2-a277-0c804a6b4672.png)
+<br>
+![image](https://user-images.githubusercontent.com/56955430/142062107-32081cee-caf6-4931-b517-dc6a5bdf64c6.png)
+<br>
+Textarea:
+<br>
+![image](https://user-images.githubusercontent.com/56955430/142062189-0197182f-f1b5-41c1-9707-93f0ed617137.png)
+<br>
+Wpisywane znaki są odrazu podliczane, po zmienieniu focusu z texboxu na zewnatrz pojawia się wpisany text, zaznaczony text jest wypisywany.
+<br>
+Wklejenie tekstu sprawi, że pojawi nam sie komunikat o liczbie wklejonych rzeczy:
+<br>
+![image](https://user-images.githubusercontent.com/56955430/142062393-b5192a6b-9492-4fca-913c-2a0c02b235e9.png)
+<br>
+Skopiowanie "Hello, world" sprawia, że pojawi nam sie licznik, ile razy skopiowaliśmy to zdanie
+![image](https://user-images.githubusercontent.com/56955430/142062508-95ee801c-53fa-41fe-85dd-a5e59a4c56c0.png)
 <br>
 Zadania z JavaScript:
 <br>
