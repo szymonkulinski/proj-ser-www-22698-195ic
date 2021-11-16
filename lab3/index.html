@@ -40,7 +40,12 @@
     -->
 	<script>
 		Alert.addEventListener("click", function(){ alert("Alert!"); });
+		Alert.addEventListener("click", changeBackgroundToRed);
 		
+		function changeBackgroundToRed()
+		{
+			this.style.background = "red";
+		}
 		
 		function randomColor()
 		{
@@ -130,7 +135,7 @@
 		function fontSizeMinus()
 		{
 			fontSizeInt--;
-						document.getElementById("world").style.fontSize = fontSizeInt + 'px';
+			document.getElementById("world").style.fontSize = fontSizeInt + 'px';
 		}
 
 		FontSizePlus.addEventListener("click", fontSizePlus)
