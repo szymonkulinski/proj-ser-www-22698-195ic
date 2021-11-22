@@ -1,4 +1,3 @@
-<br>
 Bazowa Gra PONG prezentuje się w ten sposób:
 <br>
 ![image](https://user-images.githubusercontent.com/56955430/142914484-8aceb81e-6cad-40bc-be31-25fc6091fc54.png)
