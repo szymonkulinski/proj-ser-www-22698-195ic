@@ -1,28 +1,35 @@
-![image](https://user-images.githubusercontent.com/56955430/141384081-924c1e61-a82f-4898-b0e9-6c73aed8b0cf.png)
 <br>
-Na stronie odpowiednio:
+Bazowa Gra PONG prezentuje się w ten sposób:
 <br>
--Wyświetl alert
+![image](https://user-images.githubusercontent.com/56955430/142914484-8aceb81e-6cad-40bc-be31-25fc6091fc54.png)
 <br>
-![image](https://user-images.githubusercontent.com/56955430/141384113-c85f594f-156e-489b-a1d2-32c888dfa27d.png)
+![image](https://user-images.githubusercontent.com/56955430/142915067-44f20bfb-14e2-4017-bfdc-7012508fee2f.png)
 <br>
--Zmien kolor tla
+W kodzie dodajemy funkcję, aby można było sterować zarówno strzałkami jak i przyciskami "w" i "s"
 <br>
-![image](https://user-images.githubusercontent.com/56955430/141384147-742cd585-6d6c-4929-88bb-32c82b7af289.png)
+Rozbudowujemy funkcję, dzięki której po przytrzymaniu przycisku spacji będziemy poruszać się wolniej
 <br>
--Poprzedni, nastepny font
+![image](https://user-images.githubusercontent.com/56955430/142916271-7afa0763-2786-4a7e-9575-4eab6b6924aa.png)
 <br>
-![image](https://user-images.githubusercontent.com/56955430/141384226-7cc8bbe5-01ea-4229-ae90-a06b762d4094.png)
+Dodajemy funkcję sumującą punkty gdy piłka wyjdzie poza którąś z krawędzi
 <br>
-![image](https://user-images.githubusercontent.com/56955430/141384249-ee86d94f-958d-48d3-8c60-4f5f3a120d43.png)
+![image](https://user-images.githubusercontent.com/56955430/142917508-0c7cde8b-78c1-4d7e-933f-6885377ca8e6.png)
 <br>
-![image](https://user-images.githubusercontent.com/56955430/141384259-ff6a9551-1810-4c50-bd11-f9ef76409d26.png)
+Doodajemy również, aby wynik się wyświetłał u góry ekranu:
 <br>
--Usuń listnera sprawia, że po kliknięciu "Zmień Kolor" kolor sie nie zmienia
+![image](https://user-images.githubusercontent.com/56955430/142918340-966d1171-60cf-4b07-aa2f-03ea55a9ba89.png)
 <br>
--Font +/-
+![image](https://user-images.githubusercontent.com/56955430/142918428-4a64c615-da17-4223-a2bb-5da2177c9d09.png)
 <br>
-![image](https://user-images.githubusercontent.com/56955430/141384334-473a5a96-ab52-4f03-97fb-499642fc6a26.png)
+Dodajemy przycisk resetu, który resetuje punkty
 <br>
-![image](https://user-images.githubusercontent.com/56955430/141384364-9a34f86b-d36c-44d3-b80a-028178dff16b.png)
+![image](https://user-images.githubusercontent.com/56955430/142919478-6e9628ce-d758-49bf-9e13-7220b5305a86.png)
 <br>
+![image](https://user-images.githubusercontent.com/56955430/142919560-e11a906a-b93d-4fea-b017-d37117501d1a.png)
+<br>
+Dodajemy również warunek wygranej, który pozostawia na ekranie informacje o poprzednim wygranym:
+<br>
+![image](https://user-images.githubusercontent.com/56955430/142920488-3ec45ab5-3407-4fae-987c-a1f870fce3af.png)
+<br>
+![image](https://user-images.githubusercontent.com/56955430/142920563-9738a504-99fb-4501-9913-e8d17be3b416.png)
+
