@@ -5,7 +5,6 @@ Task1
 <br>
 Kod:
 <br>
-![image](https://user-images.githubusercontent.com/56955430/146066812-29d83a05-792f-4034-bc3a-7d61aa6869b1.png)
 
 ![image](https://user-images.githubusercontent.com/56955430/146064281-e909d04a-6c01-4375-b653-16035b2e2115.png)
 <br>
