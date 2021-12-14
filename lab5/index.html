@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="jquery-3.6.0.min.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript" language="javascript">
+		var osoba = {
+					  "id": 3,
+					  "name": "Clementine Bauch",
+					  "username": "Samantha",
+					  "email": "Nathan@yesenia.net",
+					  "address": {
+						"street": "Douglas Extension",
+						"suite": "Suite 847",
+						"city": "McKenziehaven",
+						"zipcode": "59590-4157",
+						"geo": {
+						  "lat": "-68.6102",
+						  "lng": "-47.0653"
+						}
+					  },
+					  "phone": "1-463-123-4447",
+					  "website": "google.com",
+					  "company": {
+						"name": "Romaguera-Jacobson",
+						"catchPhrase": "Face to face bifurcated interface",
+						"bs": "e-enable strategic applications"
+					  }
+					}
+		//1.
+		//TASK 1
+		function addNumbers(callback)
+		{
+		    var id = osoba.id;
+			var lat = osoba.address.geo.lat;
+			var lng = osoba.address.geo.lng;
+			callback(id, lat, lng);
+		}
+		
+		function addGeoLatLngId(liczba1, liczba2, liczba3)
+		{
+			console.log("1.\n\tTask1 \n\tWynik dodawania id oraz współrzędnych położenia domu: " + (parseFloat(liczba1) + parseFloat(liczba2) + parseFloat(liczba3)));
+		}
+		
+		addNumbers(addGeoLatLngId);
+		//TASK2
+		function laczenieTekstow(callback) {
+			var imie = osoba.name;
+			var city = osoba.address.city;
+			callback(imie, city);
+		}
+
+		function zlaczTekst(tekst1, teskt2) {
+			const tekstZlaczony = `${tekst1} ${teskt2}`
+			console.log("\tTask2 \n\t" + tekstZlaczony);
+		}
+
+		laczenieTekstow(zlaczTekst);
+		
+		//2.
+		//TASK1
+		console.log("2.\n");
+		var userId;
+		var geoLat 
+		fetch('https://jsonplaceholder.typicode.com/users/10')
+			.then(response => response.json())
+			.then(data => {
+				userId = data.id;
+				geoLat = data.address.geo.lat;
+			})
+			.catch(function(error){console.error(error)})
+			.finally(function(){
+				console.log("\tUserID: " + userId)
+				console.log("\tAddress Geo Lat: " + geoLat)
+				add(userId, geoLat)
+			})
+
+			function add(liczba1, liczba2) {
+				console.log("\tTask1 \n\tWynik dodawania id oraz współrzędnej Lat położenia domu:" + (parseFloat(liczba1) + parseFloat(liczba2)));
+			}
+			
+			//TASK2
+			function stworzObiekt(id, geoLat) {
+			var object = { 
+				Id: id, 
+				GeoLat: geoLat 
+			};
+			return object;
+			}   
+			
+			function createObjectPromise(getId) {
+				return new Promise((resolve, reject) => {
+					if (getId == userId) {
+						resolve(stworzObiekt(userId, geoLat));
+					} else {
+						reject('Nie znaleziono użytkownika o podanym ID')
+					}
+				});
+			}
+			
+			setTimeout(() => {
+				  createObjectPromise(10).then(newObject => console.log("\tTask2\n\tTworzenie obiektu: ", newObject));
+			}, 500);
+			
+			//3.
+			//TASK1
+			function dodawanieGeoIdAsync(liczba1, liczba2) {
+				console.log("3. \n\tTask1\n\tWynik dodawania id oraz geo lat: " + (parseFloat(liczba1) + parseFloat(liczba2)));
+			}
+			
+			async function pobierzDane(url) {
+				let response = await fetch(url);
+				if (response.ok) {
+					newObject = await response.json();
+					userIdAsync = newObject.id;
+					geoLatAsync = newObject.address.geo.lat;
+					dodawanieGeoIdAsync(userIdAsync, geoLatAsync);
+				}
+			}
+			setTimeout(() => {
+			pobierzDane('https://jsonplaceholder.typicode.com/users/6');
+			}, 550);
+			//TASK2
+			function stworzObjektAsync(idOsoby, geoLatOsoby) {
+				const osobaAsync = {
+					Id: idOsoby,
+					GeoLat: geoLatOsoby
+				};
+				console.log("\tTask2. \n\tStworzony obiekt: ")
+				console.log(osobaAsync);
+			}
+
+			async function pobierzDane2(url) {
+				let response = await fetch(url);
+				if (response.ok) {
+					newObject = await response.json();
+					userIdAsync = newObject.id;
+					geoLatAsync = newObject.address.geo.lat;
+					stworzObjektAsync(userIdAsync, geoLatAsync);
+				}
+			}
+			setTimeout(() => {
+			pobierzDane2('https://jsonplaceholder.typicode.com/users/6');
+			}, 600);
+			
+			//4.
+			//TASK1
+			setTimeout(() => {
+			let urlOsoba = 'https://jsonplaceholder.typicode.com/users/6';
+			let xhr = new XMLHttpRequest();
+			xhr.open('GET', urlOsoba);
+			xhr.responseType = 'json';
+			xhr.send();
+			
+			xhr.onload = function() {
+				let object = xhr.response;
+				userIdXhr = object.id;
+				geoLatXhr = object.address.geo.lat;
+				
+				addAjax(userIdXhr, geoLatXhr);
+				console.log("\tTask2.\n\tStworzony Obiekt:");
+				console.log(nowyObjektAjax(userIdXhr, geoLatXhr));
+			};
+			
+			xhr.onerror = function() {
+			  console.log("Error -- Zad4/Task1"); 
+			};
+			
+			function addAjax(liczba1, liczba2){
+				console.log("4.\n\tTask1\n\tUser id + geoLat = " + ((parseFloat(liczba1)) + (parseFloat(liczba2))));	
+			}
+			//TASK2
+			
+			function nowyObjektAjax(id, geoLat){
+				var object = { Id: id  , GeoLat: geoLat  };
+				return (object);
+			}
+			}, 650);
+			//5.
+			//TASK1
+			
+			function dodajIdGeoLat5(liczba1, liczba2) {
+				console.log("\tWynik dodawania id + GeoLat: " + ((parseFloat(liczba1)) + (parseFloat(liczba2))));
+			}
+			//TASK2
+			function stworzObject5(id, geoLat) {
+				var object = { Id: id  , GeoLat: geoLat  };
+				console.log("\tTask2.\n\tStworzony Obiekt:");
+				console.log(object);
+			}
+			setTimeout(() => {
+				console.log("5.\n\tTask1");
+				var userId5;
+				var geoLat5;
+				fetch('https://jsonplaceholder.typicode.com/users/5')
+				.then(response => response.json())
+				.then(data5 => {
+					userId5 = data5.id;
+					geoLat5 = data5.address.geo.lat;
+				})
+				.catch(function(error){console.error(error)})
+				.finally(function(){
+					dodajIdGeoLat5(userId5, geoLat5);
+					stworzObject5(userId5, geoLat5);
+				})
+			}, 1000);
+			
+			//6.
+			//TASK1
+			setTimeout(() => {
+			var userId6;
+			var geoLat6;
+			console.log("6.\n\tTask1");
+			//TASK1
+			function add6(liczba1, liczba2) {
+				console.log("\tWynik dodawania id + uesrId: " + ((parseFloat(liczba1)) + (parseFloat(liczba2))));
+			}
+			
+			//TASK2
+			function stworzObject6(id, uesrId) {
+				var object = { Id: id  , UserId: uesrId  };
+				console.log("\tTask2.\n\tStworzony Obiekt:");
+				console.log(object);
+			}
+			
+			axios.get('https://jsonplaceholder.typicode.com/todos/2')
+				.then(data6 => {
+					userId6 = data6.data.userId;
+					Id6 = data6.data.id;
+				})
+				.finally(function(){
+					add6(userId6, Id6);
+					stworzObject6(userId6, Id6);
+				})
+			}, 1500);
+	</script>
+</body>
+</html>
