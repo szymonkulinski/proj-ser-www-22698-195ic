@@ -12,9 +12,9 @@ Kod:
 Task2
 <br>
 Kod:
-<br>
+</br>
 ![image](https://user-images.githubusercontent.com/56955430/146065738-4520059c-7be2-4ea4-a56e-06e2bc3bea8f.png)
-<br>
+</br>
 
 2.
 <br>
