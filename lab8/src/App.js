@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Item from "./components/Item";
 import Search from "./components/Search";
 import NotFound from "./components/NotFound";
+import DarkMode from "./DarkMode";
 
 class App extends Component {
   // Prevent page reload, clear input, set URL and push history on submit
@@ -17,6 +18,11 @@ class App extends Component {
 
   render() {
     return (
+	    <div className="App">
+      <header className="App-header">
+        <DarkMode />
+      </header>
+    
       <PhotoContextProvider>
         <HashRouter basename="/SnapScout">
           <div className="container">
@@ -53,6 +59,7 @@ class App extends Component {
           </div>
         </HashRouter>
       </PhotoContextProvider>
+	  </div>
     );
   }
 }

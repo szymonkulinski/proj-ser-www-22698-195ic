@@ -1,55 +1,58 @@
-# Snap Shot [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=See%20this%20react%20example&url=https://yog9.github.io/SnapShot/&hashtags=react,context-api,freecodecamp,developers)
+#LAB8
+Szymon Kulinski, 22698, 195IC
+<br>
+Link do przykładu: https://github.com/Yog9/SnapShot
 
-[![Build Status](https://travis-ci.org/Yog9/SnapShot.svg?branch=master)](https://travis-ci.org/Yog9/SnapShot)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![HitCount](http://hits.dwyl.com/Yog9/SnapShot.svg)](http://hits.dwyl.com/Yog9/SnapShot)
+<br>
+Wykorzystane technologie:
+React js
+<br>
+React Router
+<br>
+React Hooks
+<br>
+Context API
+<br>
+Flickr API
+<br>
+Bootstrap
+<br>
+<br>
+Git diff:
+<br>
 
-[Demo of Snap Shot](https://yog9.github.io/SnapShot/)
+![image](https://user-images.githubusercontent.com/56955430/150372625-5f187ac0-b2d2-45e2-af61-2549bf384af0.png)
+<br>
 
-![](/snapscout.png)
+![image](https://user-images.githubusercontent.com/56955430/150372726-1bb879a5-12d0-4ddd-8ee4-fc40e531cc52.png)
 
-### Summary
+<br>
 
-Snap Shot is a gallery created using React,React Hooks, React Router and Context API. The Routes were setup for four default pages and a search page. Also the images were displayed using the Flickr API and axios to fetch data.
+![image](https://user-images.githubusercontent.com/56955430/150372880-ad686e4f-2511-4177-9e59-ef8cbe605359.png)
+<br>
 
-### Motivation
+Oryginalny wygląd strony:
+<br>
 
-The purpose of this project was to get familiar with React Hooks and Context API.
+![image](https://user-images.githubusercontent.com/56955430/150373561-174e3064-abb4-4515-a8f4-60d52d6c6a15.png)
+<br>
 
-### Getting Started
+Po zmianach:
+<br>
 
-Click the demo link or clone/download the repository on your local machine.
-Create a config.js file in api folder inside src folders. In config.js file write
-`export const apiKey = "YOUR_FLIKR_API_KEY";`
+![image](https://user-images.githubusercontent.com/56955430/150374462-5c3885f5-51a8-4b50-b62d-f124a2f1ea63.png)
+<br>
 
-##### Install dependencies
+Link w prawym górnym rogu przenosi do repozytorium LAB8 z projektem
+<br>
 
-`yarn install`
+Dodatkowo dodany tryb Dark Mode:
+<br>
 
-##### Run Snap Shot from the root directory.
+![image](https://user-images.githubusercontent.com/56955430/150376029-504ee2d0-21e1-4106-8dd2-cb83a7f38d58.png)
+<br>
 
-`yarn start`
+<br>
 
-### Built With
+<br>
 
-- React js
-- React Router
-- React Hooks
-- Context API
-- Flickr API
-
-### Features
-
-**1. Responsive Design.**
-
-**2. Search functionality added to search photos from API.**
-
-### Coming Soon
-
-- [ ] Cypress E2E Tests
-
-### Contributing
-
-Everyone is welcomed to contribute to this project. You can contribute either by submitting bugs or suggesting improvements by opening an issue on GitHub. Please see the [CONTRIBUTING](CONTRIBUTING.md) guidelines for more information.
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
